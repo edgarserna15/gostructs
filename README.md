@@ -1,0 +1,2 @@
+# gostructs
+Learning go structs
