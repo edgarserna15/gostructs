@@ -22,14 +22,14 @@ func main() {
 		},
 	}
 
-	edgar.updateName("ed")
+	edgar.updateName("Ed")
 	edgar.print()
 }
 
-func (p person) print() {
-	fmt.Printf("%+v", p)
+func (pointerToPerson *person) updateName(newFirstName string) {
+	(*pointerToPerson).firstName = newFirstName
 }
 
-func (p person) updateName(newFirstName string) {
-	p.firstName = newFirstName
+func (p person) print() {
+	fmt.Printf("%+v\n", p)
 }
